@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evelyn Cavallari | Psicóloga</title>
+    
+    <!-- Favicon - Ícone da aba do navegador (Novo Repositório) -->
+    <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/caiolesk/sample-page/main/logo%20(1).svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Custom Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'psi-cream': '#F2EBDF',
+                        'psi-tan': '#DECEBB',
+                        'psi-beige': '#D3C5B6',
+                        'psi-dark': '#4A443F',
+                        'psi-accent': '#8C7E6E',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-psi-cream text-psi-dark font-sans selection:bg-psi-tan overflow-x-hidden">
+
+    <!-- Header -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-700 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-4 group cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <!-- Logo Atualizado -->
+                <div class="w-16 h-16 transition-all duration-500 group-hover:scale-110">
+                    <img src="https://raw.githubusercontent.com/caiolesk/sample-page/main/logo%20(1).svg" alt="Logo Evelyn Cavallari" class="w-full h-full object-contain">
+                </div>
+                <div class="flex flex-col leading-none">
+                    <span class="font-serif text-xl md:text-2xl font-bold tracking-wide">Evelyn Cavallari</span>
+                    <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-psi-accent">psicóloga</span>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-10">
+                <a href="#inicio" class="nav-link text-[10px] uppercase tracking-[0.2em] font-bold">Início</a>
+                <a href="#sobre" class="nav-link text-[10px] uppercase tracking-[0.2em] font-bold">Sobre Mim</a>
+                <a href="#terapia" class="nav-link text-[10px] uppercase tracking-[0.2em] font-bold">A Terapia</a>
+                <a href="#contato" class="nav-link text-[10px] uppercase tracking-[0.2em] font-bold">Contato</a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-2xl" aria-label="Menu">☰</button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-psi-cream shadow-2xl p-10 flex flex-col gap-8 text-center border-t border-psi-tan/20">
+            <a href="#inicio" class="mobile-link text-xl font-serif">Início</a>
+            <a href="#sobre" class="mobile-link text-xl font-serif">Sobre Mim</a>
+            <a href="#terapia" class="mobile-link text-xl font-serif">A Terapia</a>
+            <a href="#contato" class="mobile-link text-xl font-serif border-t border-psi-tan/20 pt-6">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="min-h-screen flex items-center pt-32 pb-20 relative overflow-hidden">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 reveal">
+                    <h1 class="font-serif text-6xl md:text-8xl mb-6 leading-tight text-psi-dark">Psicóloga Evelyn Cavallari</h1>
+                    <p class="text-xl md:text-2xl text-psi-accent mb-4 font-light uppercase tracking-[0.3em]">Psicóloga | CRP 06/228010</p>
+                    <p class="text-lg md:text-xl text-psi-dark/70 mb-12 max-w-lg leading-relaxed font-light italic">
+                        "Um espaço de acolhimento, escuta e transformação através da abordagem humanista."
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="https://wa.me/5516988770528" target="_blank" class="btn-primary">Agendar Consulta</a>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center reveal">
+                    <div class="relative group">
+                        <!-- Background glow effect -->
+                        <div class="absolute -inset-10 bg-psi-beige/20 rounded-full blur-3xl transition-all duration-700 group-hover:bg-psi-beige/40"></div>
+                        <!-- Hero Image Atualizada -->
+                        <div class="relative w-full max-w-md md:max-w-lg aspect-[3/4] overflow-hidden rounded-[4rem] shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                            <img src="https://raw.githubusercontent.com/caiolesk/sample-page/main/IMG_5957.png" alt="Evelyn Cavallari" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mim -->
+        <section id="sobre" class="py-32 bg-white border-y border-psi-tan/10">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center mb-24 reveal">
+                    <h2 class="text-psi-accent font-bold tracking-[0.3em] uppercase mb-6 text-sm">Sobre Mim</h2>
+                    <h3 class="font-serif text-5xl md:text-7xl mb-12 leading-tight text-psi-dark">Um Espaço de Escuta e Acolhimento</h3>
+                    <div class="grid md:grid-cols-2 gap-12 text-left">
+                        <p class="text-lg text-psi-dark leading-relaxed font-light first-letter:text-6xl first-letter:font-serif first-letter:float-left first-letter:mr-3 first-letter:text-psi-accent">
+                            Olá, me chamo Evelyn Cavallari, sou psicóloga e atuo pela abordagem humanista, oferecendo um espaço de escuta acolhedora, empática e livre de julgamentos, onde você pode ser quem é, no seu tempo e do seu jeito.
+                        </p>
+                        <p class="text-lg text-psi-dark/90 leading-relaxed font-light pt-2">
+                            Atendo adolescentes e adultos, acompanhando cada pessoa em sua jornada de autoconhecimento, no fortalecimento e na construção de uma relação mais gentil consigo mesma e com os outros.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filosofia de Trabalho -->
+        <section class="py-32 bg-psi-cream/30 border-b border-psi-tan/20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-24 reveal">
+                    <h2 class="text-psi-accent font-bold tracking-[0.3em] uppercase mb-6 text-sm">Nossa Essência</h2>
+                    <h3 class="font-serif text-5xl md:text-7xl mb-16 text-psi-dark">Minha Filosofia de Trabalho</h3>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8 reveal">
+                    <div class="bg-white p-12 rounded-xl shadow-sm border-l-4 border-psi-accent transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group">
+                        <div class="w-12 h-12 mb-6 text-psi-accent opacity-50">
+                            <!-- Ícone de Aperto de Mãos -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 17 6.26 12.26a2.12 2.12 0 1 1 3-3L12 12l2.74-2.74a2.12 2.12 0 0 1 3 3L13 17Z"/>
+                                <path d="m18 11.5 1.5 1.5"/>
+                                <path d="m4.5 11.5 1.5 1.5"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-serif text-3xl mb-6 text-psi-dark group-hover:text-psi-accent transition-colors">Respeito à Singularidade</h4>
+                        <p class="text-psi-dark/80 leading-relaxed font-light">
+                            Cada indivíduo possui uma história única, e o processo terapêutico é um caminho singular que merece respeito, cuidado e sensibilidade absoluta.
+                        </p>
+                    </div>
+                    <div class="bg-white p-12 rounded-xl shadow-sm border-l-4 border-psi-accent transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group">
+                        <div class="w-12 h-12 mb-6 text-psi-accent opacity-50">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h4 class="font-serif text-3xl mb-6 text-psi-dark group-hover:text-psi-accent transition-colors">Caminhar ao Lado</h4>
+                        <p class="text-psi-dark/80 leading-relaxed font-light">
+                            Meu trabalho é valorizar seus sentimentos, sua experiência e o ritmo do seu processo, para que você possa se conhecer e se acolher de forma autêntica.
+                        </p>
+                    </div>
+                    <div class="bg-white p-12 rounded-xl shadow-sm border-l-4 border-psi-accent transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group">
+                        <div class="w-12 h-12 mb-6 text-psi-accent opacity-50">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h4 class="font-serif text-3xl mb-6 text-psi-dark group-hover:text-psi-accent transition-colors">Potencial de Crescimento</h4>
+                        <p class="text-psi-dark/80 leading-relaxed font-light">
+                            Acredito profundamente na transformação que existe em cada pessoa, acompanhando-o com presença, empatia e compreensão genuína em cada etapa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Como Funciona -->
+        <section id="terapia" class="py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mb-32 reveal">
+                    <h2 class="text-psi-accent font-bold tracking-[0.3em] uppercase mb-6 text-sm">O Processo</h2>
+                    <h3 class="font-serif text-5xl md:text-8xl mb-12 leading-tight text-psi-dark">Como Funciona a Terapia?</h3>
+                    <p class="text-xl md:text-2xl text-psi-dark leading-relaxed font-light max-w-3xl border-l-2 border-psi-tan pl-10 italic">
+                        É uma jornada de cuidado e autoconhecimento. Um espaço seguro onde você pode falar sobre suas experiências e pensamentos com total liberdade.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-10 reveal items-stretch">
+                    <div class="card-glass group p-12 text-center flex flex-col h-full">
+                        <div class="mb-10 w-20 h-20 mx-auto text-psi-accent transition-transform duration-500 group-hover:-translate-y-2">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                        </div>
+                        <h4 class="font-serif text-3xl mb-6 text-psi-dark group-hover:text-psi-accent transition-colors">Segurança</h4>
+                        <p class="text-psi-dark/70 font-light leading-relaxed">Sigilo absoluto e ética profissional, garantindo um ambiente de total confiança e tranquilidade.</p>
+                    </div>
+                    <div class="card-glass group p-12 text-center flex flex-col h-full">
+                        <div class="mb-10 w-20 h-20 mx-auto text-psi-accent transition-transform duration-500 group-hover:-translate-y-2">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 8v8"/><path d="M8 11v2"/><path d="M16 11v2"/><path d="M4 11.5v1"/><path d="M20 11.5v1"/></svg>
+                        </div>
+                        <h4 class="font-serif text-3xl mb-6 text-psi-dark group-hover:text-psi-accent transition-colors">Escuta Atenta</h4>
+                        <p class="text-psi-dark/70 font-light leading-relaxed">Foco incondicional na sua subjetividade e na forma genuína como você interage com o mundo.</p>
+                    </div>
+                    <div class="card-glass group p-12 text-center flex flex-col h-full">
+                        <div class="mb-10 w-20 h-20 mx-auto text-psi-accent transition-transform duration-500 group-hover:-translate-y-2">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3z"/></svg>
+                        </div>
+                        <h4 class="font-serif text-3xl mb-6 text-psi-dark group-hover:text-psi-accent transition-colors">Autenticidade</h4>
+                        <p class="text-psi-dark/70 font-light leading-relaxed">Espaço livre para ser quem você realmente é, explorando sua verdade sem máscaras ou pressões.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="bg-psi-dark text-white p-12 md:p-24 rounded-[3rem] shadow-2xl relative overflow-hidden reveal">
+                    <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full -mb-48 -mr-48 blur-3xl"></div>
+                    <div class="grid md:grid-cols-2 gap-20 relative z-10">
+                        <div>
+                            <div class="flex items-center gap-3 text-psi-tan mb-8">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                <span class="uppercase tracking-widest text-xs font-bold">Inicie sua Jornada</span>
+                            </div>
+                            <h3 class="font-serif text-5xl md:text-7xl mb-10 leading-tight">Faça o Seu Agendamento</h3>
+                            <div class="space-y-8 text-lg text-white/80 leading-relaxed font-light">
+                                <p>O agendamento é o primeiro passo para o seu cuidado emocional. Realizo atendimentos na modalidade <strong>online</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center items-center md:items-start">
+                            <h4 class="font-serif text-3xl mb-12 text-psi-tan italic">Contatos</h4>
+                            <div class="space-y-12 w-full">
+                                <a href="https://wa.me/5516988770528" target="_blank" class="block group">
+                                    <p class="text-xs uppercase tracking-widest text-white/50 mb-2 font-bold">WhatsApp</p>
+                                    <p class="text-3xl font-light group-hover:text-psi-tan transition-colors">+55 16 98877-0528</p>
+                                </a>
+                                <a href="https://www.instagram.com/psi.evelyncavallari" target="_blank" class="block group">
+                                    <p class="text-xs uppercase tracking-widest text-white/50 mb-2 font-bold">Instagram</p>
+                                    <p class="text-2xl font-light group-hover:text-psi-tan transition-colors">@psi.evelyncavallari</p>
+                                </a>
+                                <a href="mailto:psi.evelyncavallari@gmail.com" class="block group">
+                                    <p class="text-xs uppercase tracking-widest text-white/50 mb-2 font-bold">E-mail</p>
+                                    <p class="text-2xl font-light group-hover:text-psi-tan transition-colors break-all">psi.evelyncavallari@gmail.com</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 bg-psi-cream text-center">
+        <div class="container mx-auto px-6">
+            <!-- Footer Logo Atualizado -->
+            <div class="w-24 h-24 mx-auto mb-8 opacity-60">
+                <img src="https://raw.githubusercontent.com/caiolesk/sample-page/main/logo%20(1).svg" alt="Logo Evelyn Cavallari" class="w-full h-full object-contain">
+            </div>
+            <p class="font-serif text-3xl mb-1 text-psi-dark">Evelyn Cavallari</p>
+            <p class="text-[10px] uppercase tracking-[0.6em] text-psi-accent font-bold mb-12">CRP 06/228010</p>
+            <p class="text-[10px] uppercase tracking-widest text-psi-dark/20">© <span id="year"></span> Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/5516988770528" target="_blank" class="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-5 rounded-full shadow-2xl hover:scale-110 active:scale-90 transition-all duration-300 group">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="group-hover:rotate-12 transition-transform"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.631 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script src="index.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

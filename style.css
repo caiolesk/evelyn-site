@@ -1,0 +1,98 @@
+
+/* Reset e Base */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    color: #4A443F;
+}
+
+/* Glassmorphism para o Header */
+.glass {
+    background: rgba(242, 235, 223, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(211, 197, 182, 0.4);
+}
+
+/* Animações de Revelação Melhores */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botões Customizados */
+.btn-primary {
+    @apply px-10 py-5 bg-psi-accent text-white uppercase tracking-[0.2em] text-[11px] font-bold transition-all duration-500 hover:bg-psi-dark hover:shadow-2xl hover:-translate-y-1 active:scale-95 shadow-xl;
+}
+
+.btn-secondary {
+    @apply px-10 py-5 border border-psi-accent text-psi-accent uppercase tracking-[0.2em] text-[11px] font-bold transition-all duration-500 hover:bg-psi-accent hover:text-white hover:-translate-y-1 active:scale-95;
+}
+
+/* Links do Menu */
+.nav-link {
+    @apply text-psi-accent transition-colors duration-300;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #8C7E6E;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    @apply text-psi-dark;
+}
+
+/* Cards com Vidro */
+.card-glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(211, 197, 182, 0.3);
+    border-radius: 20px;
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.card-glass:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-8px);
+    box-shadow: 0 30px 50px -15px rgba(140, 126, 110, 0.15);
+}
+
+/* Tipografia */
+h1, h2, h3, h4, .font-serif {
+    letter-spacing: -0.01em;
+}
+
+/* Scrollbar Custom */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F2EBDF;
+}
+::-webkit-scrollbar-thumb {
+    background: #D3C5B6;
+    border-radius: 20px;
+}
