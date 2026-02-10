@@ -30,18 +30,62 @@ body {
     transform: translateY(0);
 }
 
-/* Botões Customizados */
+/* Botão Agendar Consulta - Moldura Marrom Escuro Preenchida Arredondada */
 .btn-primary {
-    @apply px-10 py-5 bg-psi-accent text-white uppercase tracking-[0.2em] text-[11px] font-bold transition-all duration-500 hover:bg-psi-dark hover:shadow-2xl hover:-translate-y-1 active:scale-95 shadow-xl;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 3rem !important;
+    background-color: #4A443F !important; /* Marrom escuro preenchido */
+    color: #ffffff !important;
+    border: 3px solid #38322D !important; /* Moldura em marrom ainda mais escuro para destaque */
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none !important;
+    border-radius: 50px; /* Formato arredondado solicitado */
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #5C554E !important; 
+    border-color: #4A443F !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(74, 68, 63, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(74, 68, 63, 0.2);
 }
 
 .btn-secondary {
-    @apply px-10 py-5 border border-psi-accent text-psi-accent uppercase tracking-[0.2em] text-[11px] font-bold transition-all duration-500 hover:bg-psi-accent hover:text-white hover:-translate-y-1 active:scale-95;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border: 1px solid #8C7E6E;
+    color: #8C7E6E;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px; /* Consistência com o botão principal */
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #8C7E6E;
+    color: #ffffff;
 }
 
 /* Links do Menu */
 .nav-link {
-    @apply text-psi-accent transition-colors duration-300;
+    color: #8C7E6E;
+    text-decoration: none;
+    transition: color 0.3s ease;
     position: relative;
     padding-bottom: 2px;
 }
@@ -62,7 +106,7 @@ body {
 }
 
 .nav-link:hover {
-    @apply text-psi-dark;
+    color: #4A443F;
 }
 
 /* Cards com Vidro */
@@ -78,11 +122,6 @@ body {
     background: rgba(255, 255, 255, 1);
     transform: translateY(-8px);
     box-shadow: 0 30px 50px -15px rgba(140, 126, 110, 0.15);
-}
-
-/* Tipografia */
-h1, h2, h3, h4, .font-serif {
-    letter-spacing: -0.01em;
 }
 
 /* Scrollbar Custom */
