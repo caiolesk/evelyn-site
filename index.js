@@ -70,6 +70,24 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
+    // Rastreamento de Cliques no WhatsApp (Google Analytics)
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+        link.addEventListener('click', function() {
+            const label = this.innerText.trim() || this.getAttribute('aria-label') || 'Botão Flutuante';
+            if (typeof gtag === 'function') {
+                gtag('event', 'whatsapp_click', {
+                    'event_category': 'Engagement',
+                    'event_label': label,
+                    'button_location': this.closest('section') ? this.closest('section').id : 'footer/fixed'
+                });
+            }
+            // Também rastrear no Meta Pixel se disponível
+            if (typeof fbq === 'function') {
+                fbq('track', 'Contact');
+            }
+        });
+    });
+
     // Scroll simples para mudar o estilo da navbar
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
